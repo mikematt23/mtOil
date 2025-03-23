@@ -1,13 +1,21 @@
 import Card from "@/components/Ui/Card";
-import { Text, View, StyleSheet } from "react-native";
+import Input from "@/components/Ui/Input";
+import Nav from "@/components/Ui/Nav";
+import { Text, View, StyleSheet, useWindowDimensions } from "react-native";
+import { Link } from 'expo-router';
+
+
 
 
 export default function Index() {
   return (
     <View style={styles.holder}>
       <Card>
-        <Text>Edit app/index.tsx to edit this screen.</Text>
+        <Input title="UserName" placeHolder="Enter User Name"/>
+        <Input title="Password" placeHolder="Enter Password"/>
       </Card>
+      <Nav item = {["profile"]}/>
+      <Link href="/profile">About</Link>
     </View>
   );
 }
@@ -15,7 +23,8 @@ export default function Index() {
 const styles = StyleSheet.create({
   holder:{
     paddingTop: "10%",
-    height: "80%"
+    display:"flex",
+    alignItems:"center"
   }
 })
 

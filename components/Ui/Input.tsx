@@ -1,12 +1,18 @@
-import { TextInput } from "react-native"
+import { TextInput, View, Text } from "react-native"
 
 interface props{
     title:string,
     placeHolder:string,
 }
 
-const Input = ()=>{
+const Input = ({title,placeHolder}:props)=>{
     return(
-        <TextInput/>
+        <View>
+          <Text>{title}</Text> 
+          <TextInput placeholder={placeHolder}/>
+        </View>
     )
 }
+
+
+export default Input

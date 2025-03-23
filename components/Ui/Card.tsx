@@ -1,26 +1,38 @@
-import { View, Text, StyleSheet } from "react-native"
+import { View, Text, StyleSheet, useWindowDimensions } from "react-native"
 import { ReactNode } from "react"
+
+
+
 
 interface props{
     children: ReactNode;
 }
 
 const Card: React.FC<props> = ({children})=>{
+  const styles = useStyle()
    return(
-     <View style={styles.Card}>
+     <View style = {styles.card}>
        <Text>Card</Text>
        {children}
      </View>)
 }
 
-const styles = StyleSheet.create({
-    Card:{
-     backgroundColor:"red",
-     flex: 1,
-     justifyContent: "center",
-     alignItems: "center",
-     height: 200
+const useStyle = ()=>{
+  const {height, width, scale, fontScale} = useWindowDimensions();
+  const styles = StyleSheet.create({
+    card:{
+      height: height/4,
+      width: width/1.05,
+      borderRadius:4,
+      backgroundColor: "red",
+      display:"flex",
+      justifyContent:'center',
+      alignItems:"center"
     }
- })
+  })
+  return styles
+}
+
+
 
 export default Card
