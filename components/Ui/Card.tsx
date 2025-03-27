@@ -12,7 +12,6 @@ const Card: React.FC<props> = ({children})=>{
   const styles = useStyle()
    return(
      <View style = {styles.card}>
-       <Text>Card</Text>
        {children}
      </View>)
 }
@@ -21,10 +20,11 @@ const useStyle = ()=>{
   const {height, width, scale, fontScale} = useWindowDimensions();
   const styles = StyleSheet.create({
     card:{
-      height: height/4,
+      height: height/1.5,
       width: width/1.05,
       borderRadius:4,
-      backgroundColor: "red",
+      marginTop:height/8,
+      backgroundColor: "rgba(235, 37, 7, 0.76)",
       display:"flex",
       justifyContent:'center',
       alignItems:"center"

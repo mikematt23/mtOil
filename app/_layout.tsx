@@ -5,7 +5,7 @@ export default function RootLayout() {
     <Stack>
       <Stack.Screen
         name="index"
-        options={{headerTitle: "Mt Oil"}}
+        options={{headerTitle: "Mt Oil",headerBackVisible: false}}
       />
          <Stack.Screen
         name="profile"

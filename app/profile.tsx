@@ -1,14 +1,29 @@
-import { Text,View, useWindowDimensions, StyleSheet } from "react-native"
+import { Text,View, useWindowDimensions, StyleSheet,ImageBackground  } from "react-native"
 import Card from "@/components/Ui/Card"
+import Nav from "@/components/Ui/Nav"
+import Theme from "@/theme/Theme";
+import Input from "@/components/Ui/Input";
+import { Link } from "expo-router"
+    
 
 const Profile = ()=>{
     const styles = useStyle()
+    const theme = Theme()
     return(
-        <View style = {styles.container}>
+        <View style={theme.holder}>
+        <ImageBackground
+         source={require('../assets/images/redLogo.png')}
+         style = {theme.img}
+         resizeMode="contain"
+        >
           <Card>
-            <Text>Profile</Text>
+            <Text>Profle</Text>
+            <Input title="UserName" placeHolder="Enter User Name"/>
+            <Input title="Password" placeHolder="Enter Password"/>
           </Card>
-       </View>
+          <Nav items = {["index"]}/>
+        </ImageBackground>
+      </View>
     )
 }
 
