@@ -6,10 +6,9 @@ const Theme = ()=>{
 
     const styles = StyleSheet.create({
       holder:{
-        height:height,
+        height:"100%",
         width:width,
         flex:1,
-        justifyContent:"flex-end",
         backgroundColor:"rgb(27, 17, 15)"
       },
    
