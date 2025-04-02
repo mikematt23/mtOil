@@ -10,17 +10,27 @@ export default function TabLayout() {
     <Tabs screenOptions={{ tabBarActiveTintColor: 'red' }}>
       <Tabs.Screen
         name="index"
-        options={{headerTitle: "MT Oil", headerStyle:{backgroundColor:"rgba(235, 37, 7, 0.84)"},headerTintColor: "white"}}
+        options={{ title:"Login",headerTitle: "MT Oil", headerStyle:{backgroundColor:"rgba(235, 37, 7, 0.84)"},headerTintColor: "white"}}
         redirect={isLoggedin}
       />
       <Tabs.Screen
-        name='about'
-        options={{headerTitle: "MT Oil", headerStyle:{backgroundColor:"rgba(235, 37, 7, 0.84)"},headerTintColor: "white"}}
+        name='signup'
+        options={{title:"Sign up",headerTitle: "MT Oil", headerStyle:{backgroundColor:"rgba(235, 37, 7, 0.84)"},headerTintColor: "white"}}
         redirect={isLoggedin}
       />
       <Tabs.Screen
         name="profile"
-        options={{headerTitle: "MT Oil", headerStyle:{backgroundColor:"rgba(235, 37, 7, 0.84)"},headerTintColor: "white"}}
+        options={{title:"Profile",headerTitle: "MT Oil", headerStyle:{backgroundColor:"rgba(235, 37, 7, 0.84)"},headerTintColor: "white"}}
+        redirect={!isLoggedin}
+      />
+      <Tabs.Screen
+        name="order"
+        options={{title:"Order",headerTitle: "MT Oil", headerStyle:{backgroundColor:"rgba(235, 37, 7, 0.84)"},headerTintColor: "white"}}
+        redirect={!isLoggedin}
+      />
+      <Tabs.Screen
+        name="history"
+        options={{title:"History",headerTitle: "MT Oil", headerStyle:{backgroundColor:"rgba(235, 37, 7, 0.84)"},headerTintColor: "white"}}
         redirect={!isLoggedin}
       />
     </Tabs>

@@ -24,9 +24,9 @@ const useStyle = ()=>{
       width: width/1.05,
       borderRadius:4,
       marginTop:height/11,
+      padding:height/10,
       backgroundColor: "rgba(235, 37, 7, 0.76)",
       display:"flex",
-      justifyContent:'center',
       alignItems:"center"
     }
   })
